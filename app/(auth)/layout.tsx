@@ -1,5 +1,4 @@
 import { ClerkProvider } from '@clerk/nextjs';
-import React from 'react';
 import { Inter } from 'next/font/google';
 import '../globals.css';
 
@@ -7,13 +6,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Threads',
-  description: '',
+  description: 'Threds app in Next.js',
 };
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
+} : {
+  children: React.ReactNode
 }) {
   return (
     <ClerkProvider>
@@ -21,5 +20,5 @@ export default function RootLayout({
         <body className={`${inter.className}, bg-dark-1`}>{children}</body>
       </html>
     </ClerkProvider>
-  );
+  )
 }
